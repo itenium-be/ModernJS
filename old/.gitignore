@@ -1,0 +1,4 @@
+~$*.pptx
+node_modules
+package-lock.json
+src/dist/
