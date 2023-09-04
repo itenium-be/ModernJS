@@ -1,6 +1,10 @@
 ModernJS
 ========
 
+- [Starterkit](https://github.com/stemmlerjs/simple-typescript-starter)
+
+
+
 Setup?
 - Step by step instructions for setting up
 - React, Angular, Node/Express
