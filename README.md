@@ -1,6 +1,9 @@
 ModernJS
 ========
 
+Node v20.5.0
+
+
 - [Starterkit](https://github.com/stemmlerjs/simple-typescript-starter)
 
 
