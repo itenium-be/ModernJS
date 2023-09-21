@@ -37,7 +37,7 @@ describe('Unions', () => {
 
 
 
-  // Custom Assertions
+  // Custom Assertions with Type Guards
   function assertIsString(val: any): asserts val is string {
     if (typeof val !== 'string') {
       throw new Error('Not a string!')

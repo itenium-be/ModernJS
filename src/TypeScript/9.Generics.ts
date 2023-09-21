@@ -17,3 +17,8 @@ interface Box<Type> {
 
 // Type default
 function create<T extends HTMLElement = HTMLDivElement, U = T[]>(element?: T, children?: U) {}
+
+
+
+// infer
+type Flatten<T> = T extends Array<infer ItemType> ? ItemType : T

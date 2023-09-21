@@ -114,7 +114,7 @@ describe('Promises :: Awaited', () => {
   type MultiAwaited = Awaited<boolean | Promise<number>>
 })
 
-
+type SimpleAwaited<T> = T extends Promise<infer ReturnType> ? ReturnType : T
 
 
 
