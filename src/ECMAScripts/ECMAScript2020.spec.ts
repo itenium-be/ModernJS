@@ -40,7 +40,7 @@ describe('ECMAScript 2020', () => {
   })
 
 
-  // See ECMAScript2022 for Nullish Coalescing (??) operator
+  // See ECMAScript2021 for Nullish Coalescing (??) operator
 
 
   describe('optional chaining with ?.', () => {

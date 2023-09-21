@@ -81,4 +81,4 @@ Other Sessions
 - Node, NVM, npm scripts
 - Husky, nodemon
 - eslint, prettier, editorconfig
-- typescript: tsconfig.json
+- typescript: tsconfig.json & tsc

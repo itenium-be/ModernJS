@@ -1,5 +1,3 @@
-import { data } from './TopLevelAwait'
-
 describe('ECMAScript 2022', () => {
   describe('.at()', () => {
     it('allows negative indexing', () => {
@@ -56,7 +54,7 @@ describe('ECMAScript 2022', () => {
   describe('new RegExp /d flag', () => {
     const input = '12345678910'
 
-    test('regEx is kind weird too', () => {
+    test('regEx is kind of weird too', () => {
       const regEx = /1(\d)/g
       // matchAll introduced in ES2020
       const result = input.matchAll(regEx)

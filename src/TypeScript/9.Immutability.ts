@@ -16,6 +16,8 @@ type SomeType = {
   readonly prop: string; // --> not immutable!
 }
 
+
+// Utility Readonly<T>
 function noReAssignment<T>(value: Readonly<T>) {}
 
 
@@ -25,4 +27,5 @@ type Mutable<Type> = {
 };
 
 
+// Utility NonNullable<T>
 function noNullOrUndefined<T>(value: NonNullable<T>) {}

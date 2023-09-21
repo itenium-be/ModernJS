@@ -44,7 +44,7 @@ describe('ECMAScript 2023', () => {
 
     test('toReversed() creates a new array', () => {
       const arr = [9, 3, 5, 1]
-      const newArr = (arr as any).toReversed()
+      const newArr = arr.toReversed()
 
       expect(arr).toEqual([9, 3, 5, 1])
       expect(newArr).toEqual([1, 5, 3, 9])
@@ -55,7 +55,7 @@ describe('ECMAScript 2023', () => {
   describe('Array.prototype.with', () => {
     it('replaces an element and returns a new array', () => {
       const arr = [9, 3, 5, 1]
-      const newArr = (arr as any).with(2, '42')
+      const newArr = arr.with(2, '42')
 
       expect(arr).toEqual([9, 3, 5, 1])
       expect(newArr).toEqual([9, 3, '42', 1])
@@ -68,7 +68,7 @@ describe('ECMAScript 2023', () => {
 
     it('returns the last match or undefined', () => {
       const arr = [{a: 1}, {a: 1}]
-      const lastA = (arr as any).findLast((x: ObjA) => x.a === 1)
+      const lastA = arr.findLast((x: ObjA) => x.a === 1)
 
       expect(lastA).toEqual({a: 1})
       expect(arr[1]).toBe(lastA)
@@ -76,7 +76,7 @@ describe('ECMAScript 2023', () => {
 
     it('also has findLastIndex', () => {
       const arr = [{a: 1}, {a: 1}]
-      const lastA = (arr as any).findLastIndex((x: ObjA) => x.a === 1)
+      const lastA = arr.findLastIndex((x: ObjA) => x.a === 1)
 
       expect(lastA).toBe(1)
     })
@@ -94,11 +94,10 @@ describe('ECMAScript 2023', () => {
 
     test('toSpliced() creates a new array', () => {
       const arr = [9, 3, 5, 1]
-      const newArr = (arr as any).toSpliced(2, 1, -1, -2)
+      const newArr = arr.toSpliced(2, 1, -1, -2)
 
       expect(arr).toEqual([9, 3, 5, 1])
       expect(newArr).toEqual([9, 3, -1, -2, 1])
     })
   })
 })
-

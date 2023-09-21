@@ -360,7 +360,7 @@ describe('ES2018', () => {
 
   test('RegExp enhancements', async () => {
     // Named captures
-    // Lookbehing
+    // Lookbehind
     // s (dotall) flag
     // See: https://itenium.be/blog/javascript/regex-in-javascript/
   })
