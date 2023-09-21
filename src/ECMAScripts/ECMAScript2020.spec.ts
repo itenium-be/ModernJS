@@ -7,7 +7,7 @@ describe('ECMAScript 2020', () => {
 
   // it('knows the current url', () => {
   //   // Not sure what this will give in a node context ;)
-  //   const storeUrl = new URL('store.json', import.meta.url);
+  //   const storeUrl = new URL('store.json', import.meta.url)
   //   expect(storeUrl).toBe('yaye')
   // })
 
@@ -43,7 +43,7 @@ describe('ECMAScript 2020', () => {
   // See ECMAScript2022 for Nullish Coalescing (??) operator
 
 
-  describe('optional chaining with (?.)', () => {
+  describe('optional chaining with ?.', () => {
     // finally...
 
     it('works', () => {

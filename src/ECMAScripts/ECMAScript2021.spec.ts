@@ -110,7 +110,7 @@ describe('ECMAScript 2021', () => {
     })
 
     test('but if one fails, you only get that', async () => {
-      let all: any = undefined;
+      let all: any = undefined
       try {
         all = await Promise.all([
           Promise.resolve(true),
@@ -129,6 +129,7 @@ describe('ECMAScript 2021', () => {
         Promise.resolve(false),
       ])
 
+      // Oh noes! No true type safety due the "as x"
       const errors = all.filter(x => x.status === 'rejected') as PromiseRejectedResult[]
       expect(errors.length).toBe(1)
       expect(errors[0].reason).toBe('reason')
@@ -136,6 +137,20 @@ describe('ECMAScript 2021', () => {
       const success = all.filter(x => x.status === 'fulfilled')
       expect(success[0]).toEqual({status: 'fulfilled', value: true})
       expect(success[1]).toEqual({status: 'fulfilled', value: false})
+    })
+
+    test('or more TypeScripty', async () => {
+      const all = await Promise.allSettled([
+        Promise.resolve(true),
+        Promise.reject('reason'),
+      ])
+
+      function isRejected<T>(result: PromiseSettledResult<T>): result is PromiseRejectedResult {
+        return result.status === 'rejected'
+      }
+
+      const errors = all.filter(isRejected)
+      expect(errors[0].reason).toBe('reason')
     })
   })
 })

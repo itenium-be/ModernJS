@@ -13,8 +13,9 @@ describe('ECMAScript 2023', () => {
     })
 
     test('toSorted() creates a new array', () => {
+      // Old way: arr.slice().sort()
+
       const arr = [9, 3, 5, 1]
-      // ES2023 is pretty young
       const newArr = arr.toSorted()
 
       expect(arr).toEqual([9, 3, 5, 1])
@@ -31,7 +32,7 @@ describe('ECMAScript 2023', () => {
   })
 
 
-  describe('Array.prototype.toReverse', () => {
+  describe('Array.prototype.toReversed', () => {
     test('reverse() is also in place', () => {
       const arr = [9, 3, 5, 1]
       const sameArr = arr.reverse()
@@ -41,7 +42,7 @@ describe('ECMAScript 2023', () => {
       expect(arr).toBe(sameArr)
     })
 
-    test('toReverse() creates a new array', () => {
+    test('toReversed() creates a new array', () => {
       const arr = [9, 3, 5, 1]
       const newArr = (arr as any).toReversed()
 
@@ -65,7 +66,7 @@ describe('ECMAScript 2023', () => {
   describe('Array.prototype.findLast', () => {
     type ObjA = {a: number}
 
-    it('replaces an element and returns a new array', () => {
+    it('returns the last match or undefined', () => {
       const arr = [{a: 1}, {a: 1}]
       const lastA = (arr as any).findLast((x: ObjA) => x.a === 1)
 

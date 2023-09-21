@@ -104,6 +104,8 @@ describe('ECMAScript 2022', () => {
     class Person {
       private age: number
       #wage: number
+      // or in TypeScript:
+      // accessor wage: number
 
       constructor() {
           this.age = 5

@@ -1,3 +1,304 @@
+describe('First Website (1991)', () => {})
+
+describe('HTML (1993)', () => {})
+describe('Netscape & Yahoo (1994)', () => {})
+describe('Opera & IE (1995)', () => {})
+describe('CSS (1996)', () => {})
+
+describe('ES1 (1997) - Guy L. Steele Jr.', () => {
+  // Aka Mocha aka LiveScript
+  // Renamed to JavaScript to piggy back on the success of Java
+  // JavaScript: confusing recruiters since 1997
+})
+
+describe('ES2 (1998)', () => {
+  // Telenet & Pandora & ADSL & Skynet
+  // Google
+})
+describe('ES3 (1999)', () => {
+  // Napster
+  // IE5
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// JavaScript winter?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+describe('JSON (2001)', () => {})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ES4 abandoned in 2003
+// "Political differences"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+describe('Firefox (2004)', () => {})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+describe('SASS & jQuery (2006)', () => {})
+
+
+
+
+
+
+
+
+
+
+
+
+
+describe('iPhone (2007)', () => {})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+describe('HTML5 (2008)', () => {
+  // Chrome & Android
+  // Github & StackOverflow
+  // JavaScript: The Good Parts
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+describe('Node (2009)', () => {
+  // Coffeescript
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+describe('ES5 (2009)', () => {
+  // "use strict"
+  // JSON.parse/stringify
+  // Array & Object.prototype stuff
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// AngularJS & Jasmine: 2010
+// Bootstrap: 2011
+// TypeScript: 2012
+// React & IE11 & Dart: 2013
+// Vue: 2014
+// Angular & GraphQL: 2015
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+describe('ES2015 - Is Winter Over?', () => {
+  // let / const
+  // Arrow functions
+  // Classes
+  // Dynamic obj key values {['field' + index]: true}
+  // Template strings `val=${val}`
+  // Promises
+  // Generators: function* fn() { yield true } const gen = fn(); gen.next().value (ended / reset())
+  // for(let num of seq) {}
+  // Functions: Default arguments & rest operator
+  // Spread operator
+  // Destructuring: for(let [key, value] of Object.entries(obj)) {}
+  // Modules: import/export
+  // Map, Set, WeakSet, WeakMap
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
 describe('ES2016', () => {
   test('Array.prototype.includes()', () => {
     expect([1, 2].includes(1)).toBe(true)
@@ -8,6 +309,18 @@ describe('ES2016', () => {
     expect(2 ** 3).toBe(Math.pow(2, 3))
   })
 })
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -26,6 +339,19 @@ describe('ES2017', () => {
     expect(result[1]).toEqual(['b', 2])
   })
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
