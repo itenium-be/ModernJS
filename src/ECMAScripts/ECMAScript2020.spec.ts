@@ -49,7 +49,7 @@ describe('ECMAScript 2020', () => {
     it('works', () => {
       const obj: any = {lvl1 : {lvl2: 5}}
       expect(obj?.lvl1?.lvl2).toBe(5)
-      expect(obj?.lvl1?.lvl2?.aie).toBeUndefined()
+      expect(obj.lvl1.lvl2.aie?.oops).toBeUndefined()
     })
 
     it('also works for dynamic properties', () => {
