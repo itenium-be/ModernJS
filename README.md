@@ -4,7 +4,9 @@ ModernJS
 Node v20.5.0
 
 - [Starterkit](https://github.com/stemmlerjs/simple-typescript-starter)
+- [JavaScript Roadmap](https://roadmap.sh/javascript)
 - [TypeScript Roadmap](https://roadmap.sh/typescript)
+- [TypeScript Docs](https://www.typescriptlang.org/docs/)
 - [type-fest](https://github.com/sindresorhus/type-fest)
 - [defer vs async](https://roadmap.sh/guides/avoid-render-blocking-javascript-with-async-defer): See `load-js-in-html.png`
 
