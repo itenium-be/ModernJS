@@ -195,7 +195,7 @@ describe('HTML5 (2008)', () => {
 
 
 describe('Node (2009)', () => {
-  // Coffeescript
+  // CoffeeScript
 })
 
 
