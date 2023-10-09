@@ -54,6 +54,8 @@ describe('ECMAScript 2023', () => {
 
   describe('Array.prototype.with', () => {
     it('replaces an element and returns a new array', () => {
+      // This is very usefull for example when replacing a
+      // single element in an array in a reducer
       const arr = [9, 3, 5, 1]
       const newArr = arr.with(2, '42')
 
