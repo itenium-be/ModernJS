@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
-    "target": "es2017",
+    "target": "es2022",
     "module": "esnext",
-    "lib": ["esnext", "dom"],
+    "lib": ["es2022", "esnext", "dom"],
     "allowJs": true,
     "outDir": "build",
     "rootDir": "src",
@@ -12,5 +12,5 @@
     "skipLibCheck": true
   },
   "include": ["src/**/*"],
-  "exclude": ["src/**/*.spec.ts"]
+  "exclude": []
 }

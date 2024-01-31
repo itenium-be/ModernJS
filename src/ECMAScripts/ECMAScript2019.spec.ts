@@ -26,7 +26,7 @@ describe('ECMAScript 2019', () => {
   })
 
   describe('trimStart/End', () => {
-    it('trims only spaces :(', () => {
+    it('trims only spaces 😭', () => {
       expect('   A'.trimStart()).toBe('A')
       expect('A     '.trimEnd()).toBe('A')
     })

@@ -5,7 +5,7 @@ describe('Netscape & Yahoo (1994)', () => {})
 describe('Opera & IE (1995)', () => {})
 describe('CSS (1996)', () => {})
 
-describe('ES1 (1997) - Guy L. Steele Jr.', () => {
+describe('ES1 (1997) - Brendan Eich', () => {
   // Aka Mocha aka LiveScript
   // Renamed to JavaScript to piggy back on the success of Java
   // JavaScript: confusing recruiters since 1997

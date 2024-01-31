@@ -106,8 +106,13 @@ describe('ECMAScript 2022', () => {
       // accessor wage: number
 
       constructor() {
-          this.age = 5
-          this.#wage = 7
+        this.age = 5
+        this.#wage = 7
+      }
+
+      static hasWageField(obj: any) {
+        // ES2024: check for private field
+        return #wage in obj;
       }
     }
 
@@ -119,6 +124,7 @@ describe('ECMAScript 2022', () => {
     // test('but the # cannot be referenced', () => {
     //   const p = new Person()
     //   expect((p as any).#wage).toBe(7)
+    //   expect((p as any)['#wage']).toBe(7)
     // })
   })
 

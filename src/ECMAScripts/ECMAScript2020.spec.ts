@@ -6,22 +6,29 @@ describe('ECMAScript 2020', () => {
   })
 
   // it('knows the current url', () => {
-  //   // Not sure what this will give in a node context ;)
+  //   // Doesn't work in a Jest context ;)
   //   const storeUrl = new URL('store.json', import.meta.url)
   //   expect(storeUrl).toBe('yaye')
   // })
 
   describe('BigInt', () => {
+    test('ES2021: numeric separators', () => {
+      expect(1_000).toBe(1000)
+    })
+
     test('max number', () => {
       expect(9_007_199_254_740_991).toBe(Number.MAX_SAFE_INTEGER)
+    })
+
+    test('"n" the easiest way to create a bigint', () => {
+      const bigInt = 98765432123456789n
+      expect(typeof bigInt).toBe('bigint')
     })
 
     test('too big', () => {
       const nrWithSquigly = 98765432123456789
       expect(typeof nrWithSquigly).toBe('number')
-
-      // const bigInt = 98765432123456789n
-      // expect(typeof bigInt).toBe('bigint')
+      expect(nrWithSquigly).toBe(98765432123456780)
     })
   })
 
@@ -48,14 +55,15 @@ describe('ECMAScript 2020', () => {
 
     it('works', () => {
       const obj: any = {lvl1 : {lvl2: 5}}
-      expect(obj?.lvl1?.lvl2).toBe(5)
+      expect(obj.lvl1.lvl2).toBe(5)
+      expect(obj.lvl1.lvl2.aie).toBeUndefined()
       expect(obj.lvl1.lvl2.aie?.oops).toBeUndefined()
     })
 
     it('also works for dynamic properties', () => {
       const user = {age: 12}
-      const userName = (user as any)?.['name']
-      expect(userName).toBeUndefined()
+      const street = (user as any)['adress']?.['street']
+      expect(street).toBeUndefined()
     })
 
     it('also works for function calls', () => {

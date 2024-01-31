@@ -22,6 +22,11 @@ describe('ECMAScript 2023', () => {
       expect(newArr).toEqual([1, 3, 5, 9])
     })
 
+    test('insert funny javascript meme here', () => {
+      const arr = [9, 10, 1].sort()
+      expect(arr).toEqual([1, 10, 9])
+    })
+
     it('can sort with lambda since ES2019', () => {
       // Chrome70+ uses TimSort (hybrid, stable, O(n log n))
       // https://en.wikipedia.org/wiki/Timsort
@@ -56,7 +61,7 @@ describe('ECMAScript 2023', () => {
     it('replaces an element and returns a new array', () => {
       // This is very usefull for example when replacing a
       // single element in an array in a reducer
-      const arr = [9, 3, 5, 1]
+      const arr: (number | string)[] = [9, 3, 5, 1]
       const newArr = arr.with(2, '42')
 
       expect(arr).toEqual([9, 3, 5, 1])

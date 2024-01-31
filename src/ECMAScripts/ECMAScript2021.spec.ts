@@ -1,9 +1,4 @@
 describe('ECMAScript 2021', () => {
-  test('numeric separators', () => {
-    expect(1_000).toBe(1000)
-  })
-
-
   describe('String.protype.replaceAll', () => {
     test('replace only replaces the first occurrence', () => {
       const result = 'Too  many  spaces'.replace('  ', ' ')
@@ -22,37 +17,19 @@ describe('ECMAScript 2021', () => {
   })
 
 
-  describe('logical assignment operators', () => {
-    describe('&&=', () => {
-      it('assigns when both are truthy', () => {
-        let x = 3
-        x &&= 5
-        expect(x).toBe(5)
-      })
-
-      test('like &&...', () => {
-        let x = 0
-        x &&= 5
-        expect(x).toBe(0)
-      })
+  describe('ES2020: Nullish Coalescing (??)', () => {
+    test('there was sort of a workaround', () => {
+      expect(undefined || 42).toBe(42)
+      expect(0 || 42).toBe(42)
     })
 
-    test('||=', () => {
-      let x = 0
-      x ||= 5
-      expect(x).toBe(5)
+    test('but most likely, you want this:', () => {
+      expect(undefined ?? 42).toBe(42)
+      expect(null ?? 42).toBe(42)
+      expect(0 ?? 42).toBe(0)
     })
 
-    describe('Nullish Coalescing (??)', () => {
-      it('was introduced in ES2020', () => {
-        expect(undefined || 42).toBe(42)
-        expect(0 || 42).toBe(42)
-
-        expect(undefined ?? 42).toBe(42)
-        expect(null ?? 42).toBe(42)
-        expect(0 ?? 42).toBe(0)
-      })
-
+    describe('ES2021 adds logical assignment operator ??=', () => {
       test('??= works for undefined', () => {
         let x: number | undefined = undefined
         x ??= 5
@@ -74,6 +51,30 @@ describe('ECMAScript 2021', () => {
   })
 
 
+  describe('other logical assignment operators', () => {
+    describe('&&=', () => {
+      it('assigns when both are truthy', () => {
+        let x = 3
+        x &&= 5
+        expect(x).toBe(5)
+      })
+
+      test('like &&...', () => {
+        let x = 0
+        x &&= 5
+        expect(x).toBe(0)
+      })
+    })
+
+    test('||=', () => {
+      let x = 0
+      x ||= 5
+      expect(x).toBe(5)
+    })
+  })
+
+
+
   describe('Promises', () => {
     test('finally as of ES2018', done => {
       Promise.resolve(1)
@@ -88,6 +89,18 @@ describe('ECMAScript 2021', () => {
         Promise.resolve(false),
       ])
       expect(first === true || first === false).toBeTruthy()
+    })
+
+    it('throws when 0 promises can be resolved', async () => {
+      let first: any;
+      try {
+        first = await Promise.any([Promise.reject(1)])
+      } catch (err: any) {
+        expect(err instanceof AggregateError).toBeTruthy()
+        expect(err.message).toBe('All promises were rejected')
+        return
+      }
+      fail()
     })
 
     test('contrast to Promise.race() which returns the first resolve/reject', async () => {
