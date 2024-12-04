@@ -10,6 +10,19 @@ describe('You may not need/want an enum', () => {
 })
 
 
+describe('create a type from an array', () => {
+  const gameStates = ['start', 'running', 'end'] as const;
+  type ElementType <T extends ReadonlyArray<unknown>> = T extends ReadonlyArray<infer ElementType>
+    ? ElementType
+    : never;
+
+  type GameStates = ElementType<typeof gameStates>;
+
+  let gameState: GameStates = 'start';
+  gameState = 'end';
+})
+
+
 enum GameState {
   Start = 1,
   Hacking,
