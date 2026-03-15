@@ -81,10 +81,9 @@ describe('ECMAScript 2021', () => {
 
 
   describe('Promises', () => {
-    test('finally as of ES2018', done => {
-      Promise.resolve(1)
+    test('finally as of ES2018', async () => {
+      await Promise.resolve(1)
         .then(value => expect(value).toBe(1))
-        .finally(() => done())
     })
 
     test('Promise.any() resolves as soon as one resolves', async () => {
