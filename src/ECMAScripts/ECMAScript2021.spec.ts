@@ -19,14 +19,19 @@ describe('ECMAScript 2021', () => {
 
   describe('ES2020: Nullish Coalescing (??)', () => {
     test('there was sort of a workaround', () => {
-      expect(undefined || 42).toBe(42)
-      expect(0 || 42).toBe(42)
+      const undef: undefined = undefined
+      const zero = 0
+      expect(undef || 42).toBe(42)
+      expect(zero || 42).toBe(42)
     })
 
     test('but most likely, you want this:', () => {
-      expect(undefined ?? 42).toBe(42)
-      expect(null ?? 42).toBe(42)
-      expect(0 ?? 42).toBe(0)
+      const undef: undefined = undefined
+      const nul: null = null
+      const zero = 0
+      expect(undef ?? 42).toBe(42)
+      expect(nul ?? 42).toBe(42)
+      expect(zero ?? 42).toBe(0)
     })
 
     describe('ES2021 adds logical assignment operator ??=', () => {
