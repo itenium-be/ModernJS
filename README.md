@@ -78,7 +78,7 @@ Monorepos et al
 Other Sessions
 --------------
 
-- Node, NVM, npm scripts
+- Node, NVM, bun scripts
 - Husky, nodemon
 - eslint, prettier, editorconfig
 - typescript: tsconfig.json & tsc
