@@ -19,9 +19,9 @@ describe('ECMAScript 2024 Sneak Preview', () => {
   describe('RegExp v flag', () => {
     const input = 'abcdef';
 
-    // Requires tsconfig target: "es2024" - skip until TypeScript fully supports it
-    test.skip('substraction with nested character class', () => {
-      const result = input.replace(new RegExp('[a-z--[aeiuo]]', 'gv'), '')
+    test('subtraction with nested character class', () => {
+      // Both operands must be nested: [[a-z]--[aeiou]] matches consonants
+      const result = input.replace(/[[a-z]--[aeiou]]/gv, '')
       expect(result).toEqual('ae')
     })
   })
